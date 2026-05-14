@@ -1,2 +1,1 @@
-# gccSVZ
-A minimal cloud-native Notes App built with AWS S3, API Gateway, Lambda (Node.js), SQS, and DynamoDB. Users can add and view text notes through a static frontend, with an async message queue architecture.
+Simple Notes App — A minimal serverless web application on AWS demonstrating S3 static hosting, API Gateway, Lambda (Node.js), SQS message queuing, and DynamoDB storage. Users submit short text notes through a browser UI; notes flow through an SQS queue, are processed by a Lambda function, and stored in DynamoDB. No authentication, no frameworks — just a clean, working example of an event-driven AWS architecture.

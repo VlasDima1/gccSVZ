@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Notes App</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px; background: #f5f5f5; }
+    h1 { text-align: center; margin-bottom: 24px; color: #333; }
+    .add-note { display: flex; gap: 8px; margin-bottom: 24px; }
+    .add-note input { flex: 1; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+    .add-note button { padding: 10px 20px; font-size: 16px; background: #4CAF50; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    .add-note button:disabled { background: #aaa; cursor: not-allowed; }
+    #status { margin-bottom: 12px; font-size: 14px; color: #666; text-align: center; }
+    .notes-list { list-style: none; }
+    .notes-list li { background: #fff; padding: 12px; margin-bottom: 8px; border-radius: 4px; border: 1px solid #ddd; }
+    .notes-list li .text { font-size: 16px; color: #333; }
+    .notes-list li .time { font-size: 12px; color: #999; margin-top: 4px; }
+    .empty { text-align: center; color: #999; padding: 24px; }
+  </style>
+</head>
+<body>
+  <h1>Simple Notes App</h1>
+
+  <div class="add-note">
+    <input type="text" id="noteInput" placeholder="Type a note..." maxlength="280">
+    <button id="addBtn" onclick="addNote()">Add</button>
+  </div>
+
+  <div id="status"></div>
+
+  <ul class="notes-list" id="notesList"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
